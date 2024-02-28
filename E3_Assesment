@@ -1,0 +1,140 @@
+//Part 1: C#
+//1. Triangle Area Calculator:
+
+C#
+using System;
+
+public class TriangleArea
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the base of the triangle:");
+        double baseValue = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Enter the height of the triangle:");
+        double heightValue = Convert.ToDouble(Console.ReadLine());
+
+        double area = 0.5 * baseValue * heightValue;
+        Console.WriteLine("The area of the triangle is: {0}", area);
+    }
+}
+
+//2. Array with user-defined formula and finding the largest element:
+
+//C#
+using System;
+
+public class ArrayExample
+{
+    public static void Main(string[] args)
+    {
+        int[] numbers = new int[5];
+
+        Console.WriteLine("Enter the value of n for the formula n^2:");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = n * n;
+            n++; // Increment n for each element
+        }
+
+        int largest = numbers[0];
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] > largest)
+            {
+                largest = numbers[i];
+            }
+        }
+
+        Console.WriteLine("The largest element in the array is: {0}", largest);
+    }
+}
+
+
+//3. Loop printing numbers and square roots:
+
+//C#
+using System;
+
+public class SquareRootLoop
+{
+    public static void Main(string[] args)
+    {
+        for (int i = 1; i <= 10; i++)
+        {
+            double squareRoot = Math.Sqrt(i);
+            Console.WriteLine("Number: {0}, Square Root: {1:0.00}", i, squareRoot);
+        }
+    }
+}
+
+//Part 2: HTML, CSS, and JavaScript
+//HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Website</title>
+<style>
+  h3 { color: blue; } /* Inline style for h3 */
+</style>
+</head>
+<body>
+<h1>Welcome to My Website!</h1>
+<p>This is a paragraph with a <a href="https://www.example.com">link</a> to an external website.</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+<img src="image.jpg" alt="Image description">
+<button onclick="checkEvenOdd()">Check Even/Odd</button>
+<p id="result"></p>
+</body>
+</html>
+
+//CSS:
+
+body {
+  background-color: lightblue;
+}
+
+h1, h2, h3 {
+  padding: 20px;
+}
+
+p {
+  font-size: 14px;
+}
+
+li {
+  list-style-type: disc;
+}
+
+
+//JavaScript:
+
+avaScript
+function checkEvenOdd() {
+  var number = parseInt(prompt("Enter a number:"));
+  var result = (number % 2 === 0) ? "even" : "odd";
+  document.getElementById("result").innerHTML = "The number is " + result;
+}
+
+//Part 3: Essay on Object-Oriented Programming (OOP)
+
+In the realm of software development, mastering Object-Oriented Programming (OOP) concepts is akin to wielding a powerful toolset essential for crafting efficient, maintainable, and reusable code. OOP is not merely a coding paradigm; it's a philosophy that empowers developers to structure programs in a way that mirrors real-world entities and interactions. In this essay, we delve into the importance of OOP concepts and elucidate how they enhance software development, with a focus on encapsulation, inheritance, polymorphism, and abstraction.
+
+Encapsulation is the cornerstone of OOP, encapsulating data and methods within objects, shielding them from external interference while allowing controlled access. For instance, consider a banking application where customer details such as name, account number, and balance are encapsulated within a 'Customer' object. This encapsulation ensures data integrity and security, preventing unauthorized modifications.
+
+Inheritance facilitates code reuse by allowing new classes to inherit attributes and behaviors from existing ones. For example, in a vehicle management system, classes such as 'Car' and 'Truck' can inherit common properties like 'make', 'model', and 'year' from a superclass 'Vehicle.' This promotes code reuse, minimizes redundancy, and simplifies maintenance, as changes made in the superclass propagate to all subclasses.
+
+Polymorphism enables flexibility and extensibility by allowing objects of different classes to be treated interchangeably. Consider a shape drawing application where various shapes such as circles, squares, and triangles are represented by different classes but share a common method 'calculateArea().’ Through polymorphism, a method like 'calculateTotalArea()' can seamlessly compute the total area of all shapes, regardless of their specific types, fostering code clarity and adaptability.
+
+Abstraction emphasizes modeling complex systems by focusing on essential attributes and behaviors while concealing unnecessary details. For instance, in a payroll system, 'Employee' objects abstract away intricate payroll calculations, providing a simplified interface for interacting with employee data. Abstraction not only enhances code readability but also facilitates system scalability and maintenance by isolating implementation details.
+
+Real-world scenarios abound where OOP proves invaluable. For instance, in game development, OOP facilitates the creation of modular game elements like characters, weapons, and environments, enabling rapid prototyping and iterative development. Similarly, in web development, frameworks like Django and Ruby on Rails leverage OOP principles to streamline the development of scalable, maintainable web applications.
+
+In conclusion, Object-Oriented Programming principles serve as the bedrock of modern software development, fostering code modularity, reusability, and maintainability. Encapsulation, inheritance, polymorphism, and abstraction collectively empower developers to tackle complex problems effectively while promoting code organization and clarity. As technology continues to evolve, a solid understanding of OOP concepts remains indispensable for aspiring software engineers, enabling them to navigate the intricacies of software development with finesse and efficiency.
